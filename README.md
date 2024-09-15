@@ -60,9 +60,26 @@ $ npm run test:cov
 
 While the application is running, open your browser and navigate to http://localhost:3000/api. You should see the Swagger UI with all existing routes, ready for testing.
 
+## Docker Container
 
-## Next Steps
+If you need to reset your database, access the docker command line of your container and follow these steps:
 
+```bash
+$ mysql -u root -p
+```
+When prompted, enter the password for the root user. The default password is "root", unless you have changed it.
+
+```bash
+$ USE challenge;
+
+$ DROP DATABASE challenge;
+
+$ CREATE DATABASE challenge;
+```
+
+Now that the database has been reset, you can re-run your migration and seed commands to set up your database schema and initial data.
+
+## Future improvements
 
 1. **Implement End-to-End (E2E) Tests**
    - Design and develop comprehensive E2E tests to ensure the entire application workflow functions as expected.
