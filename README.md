@@ -12,8 +12,6 @@ Technologies used:
 
 This example requires docker or a local MySQL installation.  If using a local MySQL database, see `src/database/config/database.ts` for credentials, and make sure there are matching credentials in the database and the source code.
 
-#### Node version v22.8.0 
-
 #### Docker
 
 There is a `docker-compose.yml` file for starting Docker.
@@ -30,10 +28,12 @@ $ docker-compose down
 
 ## Project setup
 
+#### Node version used: v22.8.0 
+
 ```bash
 $ npm install
 
-# Creating tables in the database
+# Creating tables in the database (Docker container must be running)
 $ npx sequelize-cli db:migrate
 
 # Populating tables with some mock data
